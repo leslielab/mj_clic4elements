@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/images">
+    <file>clic_chuck_very_good.pdf</file>
+    <file>clic_very_good.svg</file>
+  </qresource>
+</RCC>
