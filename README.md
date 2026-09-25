@@ -6,7 +6,17 @@ This project provides a simple TCP socket client script to communicate with a CL
 
 ## Installation & Setup
 
-1. Copy the Python script below.
+### General Usage
+0. Have the CLiC device plugged in and find the COM port which it lies in. The COM port should have no error signs, typically written as "⚠️" in the Windows Device Manager. 
+1. Download /dist/main.exe and /dist/clic_config.json. Run main.exe
+2. Press "Browse" on the left hand side, and select the configuration file. Ensure that the COM port written in the configuration file matches that which the CLiC lies on.
+3. Press "Connect to CLiC"
+4. Use the Home and Test button to ensure that the device is working. Use the changeVoltage button to set the CLiC to a targetVoltage with a rampRate.
+5. When finished, press Quit
+
+### Nikon Elements Integration
+
+1. Proceed with CLiC initation via the general usage pipeline.
 2. Open **Nikon NIS-Elements**.
 3. Create a new Python macro/script inside Elements and paste the code.
 
@@ -62,6 +72,9 @@ def call_server(
 # result = call_server("clic", "disableJoystick")
 result = call_server("clic", "changeVoltage", 69.420, 25)
 ```
+
+4. Start Elements Communication in the main.exe application
+5. Running a JOBs module will execute the command written. The possible commands are shown in the example code block.
 
 ## Usage
 
